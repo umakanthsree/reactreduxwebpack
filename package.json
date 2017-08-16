@@ -1,0 +1,50 @@
+{
+  "name": "react-redux-webpack",
+  "version": "1.0.0",
+  "description": "react with redux with webpack building tool",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --debug",
+    "node": "index.js",
+    "test": " mocha ./__test__/*.spec.js --compilers js:babel-core/register --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "local"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "webpack"
+  ],
+  "author": "umakanth",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "immutable": "^3.8.1",
+    "jquery": "^3.2.1",
+    "mongodb": "^2.2.30",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.25.0",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-airbnb": "^2.4.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.0.2",
+    "enzyme": "^2.9.1",
+    "jest": "^20.0.4",
+    "jsdom": "^11.1.0",
+    "mocha": "^3.4.2",
+    "react-addons-test-utils": "^15.6.0",
+    "react-router": "^3.0.5",
+    "react-router-redux": "^4.0.8",
+    "webpack": "^3.1.0"
+  }
+}
