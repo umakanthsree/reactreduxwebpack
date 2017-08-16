@@ -31,9 +31,9 @@ import { About } from './aboutComponent';
 
 const store = createStore(
 	combineReducers({
-	...reducer,
-	routing: routerReducer
-	})
+		...reducer,
+		routing: routerReducer
+		})
 	);
 
 // Create an enhanced history that syncs navigation events with the store
