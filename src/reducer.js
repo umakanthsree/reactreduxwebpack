@@ -2,7 +2,7 @@
 import { List, Map } from 'immutable';
 import $ from 'jquery';
 
-const init = List([]);
+const init = List([Map({ id: 0, isDone: true,  text: 'make components' })]);
 
 export default function(todos = init, action){
 	switch(action.type){

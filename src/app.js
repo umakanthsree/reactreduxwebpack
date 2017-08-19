@@ -27,11 +27,12 @@ ReactDOM.render(
 import { Router, Route, browserHistory, hashHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import { ChildPath } from './child1';
+import { StyledComponentBtn } from './StyledComponentBtn';
 import { About } from './aboutComponent';
 
 const store = createStore(
 	combineReducers({
-		...reducer,
+		reducer,
 		routing: routerReducer
 		})
 	);
@@ -47,6 +48,8 @@ ReactDOM.render(
 			</Route>
 			<Route path='/child1' component={ChildPath} >
 				<Route path='/about' component={About} />
+			</Route>
+			<Route path='/styleComp' component={StyledComponentBtn} >
 			</Route>
 			
 		</Router>

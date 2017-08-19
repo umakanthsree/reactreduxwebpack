@@ -1,19 +1,22 @@
 import React from 'react';
+import style from './main.css'
 
 export function Todo(props){
 	const {todo} = props;
 	
 	if(todo.isDone){
-		return <strike>{todo.text}</strike>;
+		return <strike className="inactive">{todo.text}</strike>;
 	}else{
-		return <span>{todo.text}</span>;
+		return <span className="active">{todo.text}</span>;
 	}
 }
 
 export function TodoList(props){
-	const {todos, addTodo, toggleTodo} = props;
+	const {addTodo, toggleTodo} = props;
 
 	console.log('props',props);
+	//console.log('todos',todos.reducer.toJS());
+	const todos = props.todos.reducer; //after routing 
 	const onSubmit = (event) => {
 		console.log('in submit');
 		 const input = event.target;
@@ -27,14 +30,15 @@ export function TodoList(props){
 	}
 //	const toggleClick = (id) => toggleTodo(id);
 	const toggleClick = id => event => toggleTodo(id);
-
+	console.log('style', style);
+	
 	return(
 		<div className="todo">
 			<input type='text' placeholder="Add Todo" onBlur={onSubmit}/>
-			<ul>
+			<ul className="todoList">
 				{todos.map && todos.map(t => {
 					return (
-						<li className="todo_item" key={t.get('id')} onClick={toggleClick(t.get('id'))}>
+						<li className="todoItem" key={t.get('id')} onClick={toggleClick(t.get('id'))}>
 							<Todo todo={t.toJS()} />
 						</li>)
 				})}	

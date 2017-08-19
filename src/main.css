@@ -1,0 +1,24 @@
+
+.todoList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.todoItem {
+  padding: .5em .25em;
+  border-bottom: solid 1px #eee;
+}
+
+.active{
+	color: green;
+}
+.inactive{
+	color: red;
+}
+
+.todoItem:hover {
+  background: #f7f7f7;
+  cursor: pointer;
+  color:blue;
+}

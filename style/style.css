@@ -1,18 +1,16 @@
-.todo {
-}
 
-.todo__list {
+.todoList {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.todo__item {
+.todoItem {
   padding: .5em .25em;
   border-bottom: solid 1px #eee;
 }
 
-.todo__item:hover {
+.todoItem:hover {
   background: #f7f7f7;
   cursor: pointer;
 }
